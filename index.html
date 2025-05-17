@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PERSONAL PORTFOLIO</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+ margin: 0; padding: 0; box-sizing:border-box; list-style: none; text-decoration: none; font-family: 'Poppins',sans-serif;
+        }
+        .header{
+            position: fixed; width: 100%; top: 0; left: 0; padding: 35px 12%; background: black;display: flex;
+            justify-content: space-between; align-items: center; backdrop-filter: blur(10px); z-index: 100;
+        }
+        .logo{
+            font-size: 30px; font-weight: bolder; color: white;font-style: italic;
+        }
+        .logo:hover{
+color: rgba(223, 150, 223, 0.957); text-shadow: 0 0 25px rgba(223, 150, 223, 0.957), 0 0 50px rgba(223, 150, 223, 0.957);
+transform: scale(1.3); 
+        }
+        span{
+            color: rgba(223, 150, 223);
+        }
+        .navbar a{
+            font-size:18px; color: white; font-weight: 500; margin: 0 20px; border-bottom: 3px solid transparent;
+            transition:0.5s ease;
+        }
+        .navbar a:hover, .navbar a.active{
+            color: rgba(223, 150, 223); border-bottom: 3px solid rgba(223, 150, 223);
+        }
+.contact{
+color:white; background-color:orangered; padding: 10px 18px;font-size: small; border: 2px solid rgba(29, 25, 25, 0.792);
+    border-radius: 4px;
+}
+.contact:hover{
+    color: black; background-color: white; cursor: pointer;
+        }
+.home{
+    width:100%; min-height: 100vh; background: rgba(241, 241, 241); display: flex; align-items: center;
+    gap: 7px; padding: 10px 12% 0;
+}
+.home-content{
+    max-width: 800px; 
+}
+.home-content h3{
+    font-size: 25px;
+}
+.home-content h1{
+font-size: 40px; font-weight: bolder;
+}
+.home-content p{
+    margin: 15px 0px;
+}
+.btn-box{
+    margin: 8px 0px; 
+}
+.btn-1:hover{
+    color: black; background-color: white; cursor: pointer;
+}
+.btn-2:hover{
+    color: black; background-color: white; cursor: pointer;
+}
+.btn-1{
+    padding: 8px 16px; background-color: black; color: white; font-size:12px ; border-radius: 4px;
+}
+.btn-2{
+    padding: 8px 16px; background-color: orangered; color: white; font-size:12px ; border-radius: 4px; margin: 0px 10px;
+}
+.img-box img{
+    width: 400px;height: 500px; border-radius: 50%;padding: 80px;  
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.6); width: 50px;
+}
+ 
+.about{
+     display: flex; justify-content: center;  align-items: center;  background: #000 ; padding: 5% 1%;
+}
+.about-img img{
+     width: 340px; position: relative; border-radius: 50%; box-shadow: 0 0 25px  rgba(223, 150, 223),  0 0 50px  rgba(223, 150, 223);
+}
+
+.about-content{
+ color: white; width:100%; min-height: 100vh;  display: inline-block; align-items: center;
+gap: 7px; padding: 10px 12% 0; justify-content: center;
+}
+.about-content h2{
+    text-align: left; color: white; font-size: 42px;
+}
+.about-content h3{
+    color: white; font-size: 62px; 
+}
+.about-content p{
+    color: white; font-size: 20px; margin: 2em 0 3em;
+}
+.contact-form{
+   max-width: 50em; margin: 1rem auto; text-align: center; margin-bottom: 3rem;
+ }
+.contact-form form .input-box input, .contact-form form textarea{
+    width: 100%; padding: 1.5rem; font-size: 18px; color: black; background-color: rgb(241, 241, 241);
+    border-radius: .8rem; margin: 1rem 0 ; resize: relative;
+}
+.footer{
+    position: relative;  background-color: black; width: 100%; padding: 40px 0px; bottom: 0px; color: white;
+}
+.footer .social{
+    text-align: center; padding-bottom: 25px; color: white; 
+}
+.footer .social a{
+    font-size: 24px; color: white; border: 2px solid rgba(238, 159, 238, 0.968); width: 40px; height: 40px;line-height: 38px;
+     display: inline-block;text-align: center; border-radius: 50%; margin: 0 8px;box-shadow:inset 0 0 10px rgba(223, 150, 223, 0.957) ;
+     transition:0.3s ease; 
+    } 
+    .footer .social a:hover{
+        transition: scale(1.5); color: rgba(223, 150, 223, 0.957); border: 2px  rgba(238, 159, 238, 0.968);
+    }
+   .footer ul{
+        margin-top: 0; padding: 0; font-size: 12px; line-height: 1.4; margin-bottom: 0; text-align: center; 
+    }
+    .footer ul li a{
+        border-bottom: 3px ; transition: 0.3s ease; 
+    }
+    .footer ul li a:hover{
+        border-bottom: 3px solid rgba(223, 150, 223, 0.957); 
+    }
+    .footer ul .li{
+        display: inline-block; padding: 0 15px;
+    }
+    .footer .copyright{
+        margin-top: 15px; text-align: center;  font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+    <header class="header">        
+        <a href="#" class="logo"><span>Nan</span>cy</a>
+        <nav class="navbar">
+            <a href="#" class="active">Portfolio</a>
+            <a href="#">Services</a>
+            <a href="#">Experience</a>
+            <a href="#">Project</a>
+            <a href="#">Education</a>
+        </nav>
+        <a href="#" class="contact">Contact Me</a>
+    </header>
+        <section class="home">
+            <div class="home-content">
+                <h3>Hi</h3>
+<h1>I'm <span> Nancy <br></span> a Web Developer</h1>
+<p>I am completing a WEB DEVELOPEMENT course.As a web developer, I specialize in building responsive and web applications
+    that combine clean design with functionality.I have also experienced with Front-end technologies
+like HTML, CSS, JAVASCRIPT. I am to deliver solutions that meet both user and business needs. </p>
+    <div class="btn-box">
+        <button class="btn-1">Hire Me</button>
+        <button class="btn-2"> Experience</button>
+    </div>
+            </div>
+<div class="img-box" >
+    <img src="S1.webp" alt="img" >
+</div>
+</section>
+<section>
+<div class="about">
+    <div class="about-img">
+        <img src="S1.webp" alt="img">
+    </div>
+       
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>WEB <span>DEVELOPER</span></h3>
+        <p>HII FRIENDS,<br>
+            My name is NANCY JHA.I am currently pursuing my btech degree in University Institute Of Technology,RGPV Bhopal(M.P.)
+from IT branch.I'm always eager to learn new tools, push the boundries of what the web can do, take on new challenges
+and grow both personally and professionally.I want to be become a successful engineer.I have built many projects like- Amazon clone, Nike clone
+and also this responsive personal portfolio using HTML, CSS and JAVASCRIPT.I'm also learning a new language like C++. I have already learnt a basic of JAVA 
+language.<br>Thank you so much for visiting my account.
+     </p>
+      <a href="#" class="btn-2">Experience</a>
+    </div></div>
+</section>
+<section class="contact-form">
+    <h2 class="contact-me">Contact <span>Me</span></h2>
+    <form action="#">
+        <div class="input-box">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="number" placeholder="phone number">
+            <input type="text" placeholder="Subject">
+        </div>
+        <textarea name="" id="" cols="20" rows="10" placeholder="Your message"></textarea>
+        <input type="submit" value="Send message" class="btn-1">
+    </form>
+</section>
+       <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook-circle'></i></box-icon></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+        <ul>
+            <li><a href="#"></a>FAQ</li>
+            <li><a href="#"></a>Services</li>
+            <li><a href="#"></a>About Me</li>
+            <li><a href="#"></a>Contact</li>
+            <li><a href="#"></a>Privacy Policy</li>
+        </ul>
+        <p class="copyright"> <i class='bx bx-copyright' ></i>2025 Nancy | All Right Reserved</p>
+       </footer>
+    
+</body>
+</html>
